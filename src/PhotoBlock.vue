@@ -1,11 +1,11 @@
 <template>
   <div class="image-container">
     <div class="image-wrapper">
-      <img src="img/now.JPG" alt="Последнее селфи" />
+      <img src="img/now.jpg" alt="Последнее селфи" />
       <p>Последнее селфи</p>
     </div>
     <div class="image-wrapper">
-      <img src="img/school.JPG" alt="Селфи из старшей школы" />
+      <img src="img/school.jpg" alt="Селфи из старшей школы" />
       <p>Фото из старшей школы</p>
     </div>
   </div>
