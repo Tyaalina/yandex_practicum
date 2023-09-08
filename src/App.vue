@@ -20,7 +20,7 @@
         <aboutMeBlock-component></aboutMeBlock-component>
       </div>
       <div v-show="currentBlock === 'block3'">
-        <a href='https://github.com/Tyaalina'>https://github.com/Tyaalina</a>
+        <a href='https://github.com/Tyaalina/yandex_practicum'>Ссылка на публичный репозиторий с исходниками приложения</a>
       </div>
       <div v-show="currentBlock === 'block4'">
         <videoBlock-component></videoBlock-component>
