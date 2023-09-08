@@ -7,22 +7,26 @@
       <div>
       
       <ul>
-        <li @click="showBlock('block1')">Фотографии</li>
-        <li @click="showBlock('block2')">Почему я захотела стать программистом</li>
-        <li @click="showBlock('block3')">Ссылка на публичный репозиторий</li>
-        <li @click="showBlock('block4')">Видео о классной фишки из CSS</li>
+        <li
+          v-for="(block, index) in blocks"
+          :key="index"
+          @click="showBlock(block)"
+          :class="{ active: currentBlock === block }"
+        >
+          {{ block }}
+        </li>
       </ul>
 
-      <div v-show="currentBlock === 'block1'">
+      <div v-show="currentBlock === 'Фотографии'">
         <photoBlock-component></photoBlock-component>
       </div>
-      <div v-show="currentBlock === 'block2'">
+      <div v-show="currentBlock === 'Почему я захотела стать программистом'">
         <aboutMeBlock-component></aboutMeBlock-component>
       </div>
-      <div v-show="currentBlock === 'block3'">
+      <div v-show="currentBlock === 'Ссылка на публичный репозиторий'">
         <a href='https://github.com/Tyaalina/yandex_practicum'>Ссылка на публичный репозиторий с исходниками приложения</a>
       </div>
-      <div v-show="currentBlock === 'block4'">
+      <div v-show="currentBlock === 'Видео о классной фишки из CSS'">
         <videoBlock-component></videoBlock-component>
       </div>
       </div>
@@ -42,7 +46,8 @@ import VideoBlock from './VideoBlock.vue';
     },
     data() {
       return {
-        currentBlock: 'block1',
+        blocks: ['Фотографии', 'Почему я захотела стать программистом', 'Ссылка на публичный репозиторий', 'Видео о классной фишки из CSS'],
+        currentBlock: 'Фотографии',
       };
     },
     methods: {
@@ -77,7 +82,9 @@ import VideoBlock from './VideoBlock.vue';
     }
 
     li.active {
-      color: red; /* Изменение цвета выбранного элемента <li> */
+      background: #e0dcdc;
+      border: solid #5c5959;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
     }
 
     a{
