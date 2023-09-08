@@ -1,8 +1,8 @@
 <template>
   <div class="video-container">
     <h1>"Градиентный фон" (CSS gradients)</h1>
-    <video controls width="640" height="360">
-      <source src="путь_к_вашему_видео.mp4" type="video/mp4">
+    <video controls width="270" height="480">
+      <source src="img/css.mp4" type="video/mp4">
       Ваш браузер не поддерживает воспроизведение видео.
     </video>
   </div>
